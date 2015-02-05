@@ -4,6 +4,7 @@ end
 
 # Sign up page
 get '/users/new' do
+  User.create()
 end
 
 # Create a new user

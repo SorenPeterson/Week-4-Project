@@ -12,6 +12,7 @@ end
 
 # Display a users page with all of their tweets
 get '/users/:id' do
+  erb :user_content
 end
 
 # Edit users preferences/settings

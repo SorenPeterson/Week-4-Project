@@ -5,6 +5,7 @@ end
 
 # Create a new tweet
 get '/tweets/new' do
+  erb :tweet_form
 end
 
 # Create a new tweet

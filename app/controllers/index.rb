@@ -1,3 +1,3 @@
 get '/' do
-  erb :user_sign_up
+  "home page"
 end

@@ -1,3 +1,12 @@
 <div class="header-bar">
-  <div class="button">Hello</div>
+  <% if user_logged_in? %>
+    <div class="button">Hello <%= current_user_email %></div>
+    <a href="/logout"><div class="button">Logout and interact with real humans</div></a>
+  <% else %>
+    <form action="/signin" method="post">
+      <input type="text" name="email" placeholder="Email Address">
+      <input type="password" name="password" placeholder="Password">
+      <input type="submit" value="Login">
+    </form>
+  <% end %>
 </div>

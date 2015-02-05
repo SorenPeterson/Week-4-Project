@@ -1,16 +1,20 @@
 def create
-  @user = User.new(params[:user])
-  @user.password = params[:password]
+  @user = User.new(email: params[:email])
+  @user.password = (params[:password])
   @user.save!
 end
 
 def login
   @user = User.find_by_email(params[:email])
   if @user.password == params[:password]
-    give_token
+    session[:user_id] = @user.id
   else
-    redirect_to home_url
+    redirect '/'
   end
+end
+
+def logout
+  session.clear
 end
 
 def forgot_password
@@ -19,4 +23,12 @@ def forgot_password
   @user.password = random_password
   @user.save!
   Mailer.create_and_deliver_password_change(@user, random_password)
+end
+
+def user_logged_in?
+  session[:user_id] != nil
+end
+
+def current_user_email
+  User.find(session[:user_id]).email
 end

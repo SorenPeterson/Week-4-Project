@@ -1,0 +1,5 @@
+<% tweet = @tweet if @tweet  %>
+<div class="tweet">
+  <p> <%= tweet.content %> </p>
+  <p>Twitted by: <%= tweet.user.email %> </p>
+</div>

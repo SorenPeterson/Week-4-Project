@@ -1,0 +1,11 @@
+.tweet {
+  background-color: #84D5FF;
+
+}
+
+.tweet_list {
+  margin: 20px auto;
+  width: 600px;
+  padding: 20px 40px 40px 40px;
+  border: 1px dotted black;
+}

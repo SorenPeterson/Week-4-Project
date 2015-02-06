@@ -1,3 +1,3 @@
 get '/' do
-  "home page"
+  erb :index
 end

@@ -6,7 +6,9 @@ end
 
 def login
   @user = User.find_by_email(params[:email])
-  if @user.password == params[:password]
+  if @user == nil
+    redirect '/'
+  elsif @user.password == params[:password]
     session[:user_id] = @user.id
   else
     redirect '/'

@@ -1,0 +1,14 @@
+.header-bar {
+  padding: 10px;
+
+  background-color: #AA6239;
+}
+
+.button {
+  padding: 10px;
+
+  display: inline-block;
+
+  background-color: #AA9139;
+  border-radius: 10px;
+}

@@ -12,6 +12,7 @@ end
 
 # Display a list of all users
 get '/users' do
+  @users = User.all
 end
 
 # Sign up page

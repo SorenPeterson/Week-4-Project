@@ -6,7 +6,11 @@ end
 
 # Create a new tweet
 get '/tweets/new' do
-  erb :'tweets/new_tweet_form'
+  if user_logged_in
+    erb :'tweets/new_tweet_form'
+  else
+    redirect '/signin'
+  end
 end
 
 # Create a new tweet

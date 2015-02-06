@@ -2,4 +2,10 @@
 <div class="tweet">
   <p> <%= tweet.content %> </p>
   <p>Twitted by: <%= tweet.user.email %> </p>
+  <% if user_logged_in? %>
+    <% user = current_user  %>
+    <% if tweet.user_id = user.id %>
+      <a href="/tweet/<%= tweet.id %>/edit"><button>change this twit</button></a>
+    <% end %>
+  <% end %>
 </div>

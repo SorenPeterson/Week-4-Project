@@ -1,6 +1,9 @@
 .tweet {
   background-color: #84D5FF;
+  border-radius: 7px;
 
+  padding: 3px;
+  margin: 10px;
 }
 
 .tweet_list {
@@ -12,8 +15,8 @@
 
 .header-bar {
   padding: 10px;
-
-  background-color: #AA6239;
+  text-align: center;
+  background-color: #403DE0;
 }
 
 .button {
@@ -21,6 +24,6 @@
 
   display: inline-block;
 
-  background-color: #AA9139;
+  background-color: #84D5FF;
   border-radius: 10px;
 }

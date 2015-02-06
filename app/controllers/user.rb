@@ -1,13 +1,29 @@
+# Sign In
+post '/signin' do
+  login
+  redirect '/'
+end
+
+# Logout
+get '/logout' do
+  logout
+  redirect '/'
+end
+
 # Display a list of all users
 get '/users' do
 end
 
 # Sign up page
 get '/users/new' do
+  erb :user_sign_up
 end
 
 # Create a new user
 post '/users' do
+  create
+  login
+  redirect '/'
 end
 
 # Display a users page with all of their tweets

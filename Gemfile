@@ -15,6 +15,7 @@ gem 'rake'
 
 gem 'shotgun'
 
+gem 'faker', github: 'stympy/faker'
 gem 'bcrypt'
 
 group :test do
@@ -26,5 +27,5 @@ end
 
 group :test, :development do
   gem 'factory_girl'
-  gem 'faker'
+  # gem 'faker'
 end

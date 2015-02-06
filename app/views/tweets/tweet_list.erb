@@ -1,0 +1,10 @@
+
+<div class="tweet_list">
+  <% @tweets.each do |tweet|  %>
+    <%= erb :'tweets/tweet_view', :locals => { :tweet => tweet } %>
+  <% end %>
+  </div>
+
+
+
+
